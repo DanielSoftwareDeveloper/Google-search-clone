@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  max-width: 90%;
+  height: 100%;
+}
+.container .logo {
+  width: 272px;
+  height: 92px;
+  margin-bottom: 24px;
+}
+.container .form {
+  width: 100%;
+}
+.search-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.search-container .input {
+  width: 100%;
+  padding: 15px 45px; /* Aumentar padding para dar espacio a los iconos */
+  border: 1px solid #909090;
+  border-radius: 50px;
+  font-size: 16px;
+  outline: none;
+  &:hover {
+    box-shadow: 0 0 0 2px rgba(133, 133, 133, 0.3);
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(92, 92, 92, 0.3);
+  }
+}
+.search-container svg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  color: #9aa0a6;
+  top: 50%; /* Add this */
+  transform: translateY(-50%); /* Add this */
+  pointer-events: none;
+}
+
+.search-container svg:first-child {
+  left: 14px;
+}
+.search-container svg:last-child {
+  right: 14px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.container .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container .buttons .button {
+  background-color: #f8f9fa;
+  padding: 13px 25px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: all 0.1s ease;
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #9c9c9c;
+  }
+}
